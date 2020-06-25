@@ -18,7 +18,7 @@ const RProject = (props) => {
 
                 <SunFlower className="recent-project-prev-svg Yellow mirror-reverse"/> 
 
-                <div className="proyectos-recientes">  <p> Proyectos  X </p>  </div>   
+                <div className="proyectos-recientes">  <p>  </p>  </div>   
                
                 <Sunset className="recent-project-post-svg Red"/>  
             </div>
