@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Start from './Sections//Start/Start'
+import RprojectsDivider from './Sections/RecentProjects/RProjectsDivider'
+import Rproject from './Sections/RecentProjects/RProject'
+import Footer from './Sections/Footer/Footer'
 
-function App() {
+
+
+const App = () => {
+
+  const [language, changeLanguage] = useState("english")
+
+  const handleLanguage = (language) => {
+    changeLanguage("english")
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+    <React.Fragment>
+
+    <Start language={language}/>
+
+    <RprojectsDivider />
+    <Rproject template="orange" language={language}  />
+    <Rproject template="red"  language={language}/>
+    <Rproject template="blue"  language={language}/>
+
+    <Footer language={language} />
+
+    <div className="soil" 
+    onClick={handleLanguage} // This be here just to deploy
+    > </div>
+
+    </React.Fragment>
+
+
+  )
+
 }
 
 export default App;

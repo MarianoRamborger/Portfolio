@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-column {
+  display: flex;
+  width: 100%;
+  flex-flow: column nowrap;
+}
+
+.demo-height {
+  height: 300px;
+}
+
+.start {
+  width: 100%;
+  background-color: #588C7E;
+  justify-content: center;
+
+  
+}
+
+.start-image {
+
+  fill: #F2E394;
+  /* opacity: 0.8; */
+  background-color: transparent;
+  height: 30%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: auto;
+
+}
+
+
+.recent-projects-divider {
+  background-color: #F2E394;
+  height: 100px;
+
+}
+
+.divider-prev-svg {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  fill: #588C7E;
+  transform: rotate(180deg);
+  height: 75%
+}
+
+.proyectos-recientes {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+ 
 }
 
-.App-link {
-  color: #61dafb;
+.proyectos-recientes p {
+  font-size: 250%;
+  background: linear-gradient(to right,  #588C7E 35%, #F2AE72  100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+	-webkit-text-fill-color: transparent;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.divider-post-svg {
+ 
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  fill: #F2AE72;
+  height: 75%;
+  margin-top: auto;
+
+}
+
+.recent-project {
+
+}
+
+.recent-project-prev-svg {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  transform: rotate(180deg);
+  height: 30%;
+  min-width: 75px;
+
+}
+
+.recent-project-post-svg {
+
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  min-width: 100px;
+  height: 30%;
+  margin-top: auto;
+  min-width: 75px;
+
+}
+
+@media only screen and (max-width: 900px) {
+  .recent-project-prev-svg, .recent-project-post-svg {
+    height: 20%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+}
+
+
+.Yellow {fill: #F2E394 }
+.Red {fill: #D96459; }
+.Orange { fill: #F2AE72 }
+.Blue {fill: #2C457E}
+
+.reverse {  transform: rotate(0deg); }
+.mirror {  transform: scaleX(-1)}
+.mirror-reverse {  transform: scaleX(-1)  rotate(180deg) }
+.left { padding-right: auto}
+
+
+
+.project-1 {
+  background-color: #F2AE72;
+}
+
+.project-2 {
+  background-color: #D96459;
+}
+
+.project-3 {
+  /* background-color: #8C4646  UTIL PARA UN CUARTO PROYECTO*/
+  background-color: #2C457E
+}
+
+
+.footer {
+  background-color: black;
+  height: 150px;
+}
+
+.soil {
+  height: 20px;
+  background-color: #8C4646;
+}
+
+
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+  from {background-position:0 0;}
+  to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+  from {background-position:0 0;}
+  to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+  from {background-position:0 0;}
+  to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+  from {background-position: 0;}
+  to {background-position:10000px 0;}
+}
+
+.stars, .twinkling  {
+position:absolute;
+width:100%;
+height: 150px;
+display:block;
+}
+
+.stars {
+background:#000 url('./Sections/Footer/stars.png') repeat  ;
+z-index:0;
+}
+
+.twinkling{
+background:transparent url('./Sections//Footer/twinkling.png') repeat  ;
+z-index:1;
+
+-moz-animation:move-twink-back 200s linear infinite;
+-ms-animation:move-twink-back 200s linear infinite;
+-o-animation:move-twink-back 200s linear infinite;
+-webkit-animation:move-twink-back 200s linear infinite;
+animation:move-twink-back 200s linear infinite;
 }
