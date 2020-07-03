@@ -6,8 +6,8 @@ const Footer = (props) => {
     return(
         <div className="footer flex-row">
 
-    <div class="stars"></div>
-    <div class="twinkling"></div>
+    <div className="stars"></div>
+    <div className="twinkling"></div>
 
         </div>
     )

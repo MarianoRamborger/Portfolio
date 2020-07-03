@@ -6,6 +6,7 @@ import {ReactComponent as Orange} from './Svgs/Orange.svg'
 import {ReactComponent as Bird} from './Svgs/Bird.svg'
 import {ReactComponent as Owl} from './Svgs/Owl.svg'
 import {ReactComponent as Grass} from './Svgs/Grass.svg'
+import Proyecto from '../../Proyecto/Proyecto.js'
 
 
 const RProject = (props) => {
@@ -18,8 +19,17 @@ const RProject = (props) => {
 
                 <SunFlower className="recent-project-prev-svg Yellow mirror-reverse"/> 
 
-                <div className="proyectos-recientes">  <p>  </p>  </div>   
+
+                <div className="proyectos-recientes">  
+                
+                <Proyecto classes={"proyecto  recent-project-1-background"} buttonClasses={"proyecto-button purple"}/>
+                {/* projecto y proyecto-button son las must-pass */}
+
+
+                </div>   
                
+
+
                 <Sunset className="recent-project-post-svg Red"/>  
             </div>
         )        
@@ -33,6 +43,7 @@ const RProject = (props) => {
             <Orange className="recent-project-prev-svg project-1-pre-svg Orange reverse"/> 
 
             <div className="proyectos-recientes">  <p>  </p>  </div>   
+            
             
             <Bird className="recent-project-post-svg project-1-post-svg Blue mirror"/>  
         </div>      
