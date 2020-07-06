@@ -1,55 +1,61 @@
 import React, {useState} from 'react'
+import experiences from './proyectos-list'
 
 
 
 const Proyecto = (props) => {
 
-const [initial, changeInitial]=useState(true)
-const [MouseIn, MouseIO] = useState(false)
+const [experience, displayExperience] = useState(false)
 
 
- const MouseEnters = () => {
-     MouseIO(true)
-   
- }
- const MouseLeaves = () => {
-    MouseIO(false)
+const handleDisplayExperience = () => {
+    displayExperience(!experience)
 }
- const handleChangeInitial = () =>{
-     changeInitial(false)
-     MouseIO(true)
- }
 
-    if (initial) {
-        return  <div onMouseEnter={handleChangeInitial}  className={props.classes}> </div>      
-    }
-  
-  
-    else {
-        return (
-            <div onMouseEnter={MouseEnters} onMouseLeave={MouseLeaves} className={props.classes}> 
+const {projectId} = props
+
+     
+     return (
+         
+         <div className={props.classes}>
+                 <div className={"project-image-container"}>
+
+                    <img src={experiences[projectId].image} alt="Imagen del sitio web" className="project-pic"/>
+
+                    <div className="overlay"> 
+
+                    <button className={`${props.buttonClasses} `}> Visitar </button>
+
+                    <button className={`${props.buttonClasses} `} onClick={handleDisplayExperience}> Experiencia </button>
             
-
-            {
-                //Escencialmente iguales, con animaciones de entrada y salidas opuestas
-             MouseIn ?               
-             <div className="proyecto-overlay scale-in-ver-top"> 
-             <button className={props.buttonClasses}> Visitar </button>
-             <button className={props.buttonClasses}> Reflexiones </button>
-             
-             </div>     
-             :
-             <div className="proyecto-overlay scale-out-ver-top"> 
-             <button className={props.buttonClasses}> Visitar </button>
-             <button className={props.buttonClasses}> Reflexiones </button>
-
-             </div>       
-            } 
-           
             
+                </div>
+        </div>
+            
+                {
+                    experience ? 
+                    <div className="experience-div">   
+                        <div > 
+                            <h2 className={props.expClass}> {experiences[projectId].id} </h2>
+                            <h4 className={props.expClass}> {experiences[projectId].desc }  </h4>
+                            <h4 className={props.expClass}> {experiences[projectId].comment} </h4>
+                        </div>
+                       
+
+                    </div>
+
+
+                    :
+                    null
+                }  
+
+
             </div>
      )
-    }
+   
+  
+  
+    
    
 
 }

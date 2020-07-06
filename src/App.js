@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import Start from './Sections//Start/Start'
 import RprojectsDivider from './Sections/RecentProjects/RProjectsDivider'
 import Rproject from './Sections/RecentProjects/RProject'
 import Footer from './Sections/Footer/Footer'
+import {Ping} from './Services/Ping'
 
 
 
@@ -14,6 +15,11 @@ const App = () => {
   const handleLanguage = (language) => {
     changeLanguage("english")
   }
+
+  useEffect(() =>{
+    Ping()
+  })
+
   
   return (
     

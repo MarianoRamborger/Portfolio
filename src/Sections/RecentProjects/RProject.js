@@ -1,12 +1,12 @@
 import React from 'react'
-import {ReactComponent as SunFlower} from './Svgs/Sunflower.svg'
+
 
 import {ReactComponent as Sunset} from './Svgs/Sunset.svg'
-import {ReactComponent as Orange} from './Svgs/Orange.svg'
 import {ReactComponent as Bird} from './Svgs/Bird.svg'
-import {ReactComponent as Owl} from './Svgs/Owl.svg'
 import {ReactComponent as Grass} from './Svgs/Grass.svg'
 import Proyecto from '../../Proyecto/Proyecto.js'
+import GitHubIcon from '@material-ui/icons/GitHub';
+
 
 
 const RProject = (props) => {
@@ -15,21 +15,16 @@ const RProject = (props) => {
 
     if (props.template === "orange" ) {
         return (
-            <div className="recent-project flex-row project-1 demo-height">
+            <div className="recent-project flex-row project-1">
 
-                <SunFlower className="recent-project-prev-svg Yellow mirror-reverse"/> 
-
+                <a href="https://github.com/MarianoRamborger/Criadero" target="blank"> <GitHubIcon className="recent-project-prev-svg github-icon Yellow"/> </a>
 
                 <div className="proyectos-recientes">  
                 
-                <Proyecto classes={"proyecto  recent-project-1-background"} buttonClasses={"proyecto-button purple"}/>
-                {/* projecto y proyecto-button son las must-pass */}
-
-
+                     <Proyecto classes={"proyecto"} buttonClasses={"proyecto-button button-orange"} projectId={0} expClass={"experience-text"}/>
+                     {/* projecto y proyecto-button son las must-pass */}
                 </div>   
                
-
-
                 <Sunset className="recent-project-post-svg Red"/>  
             </div>
         )        
@@ -38,12 +33,16 @@ const RProject = (props) => {
     else if (props.template === "red") {
         return(
 
-        <div className="recent-project flex-row project-2 demo-height">
+        <div className="recent-project flex-row project-2">
 
-            <Orange className="recent-project-prev-svg project-1-pre-svg Orange reverse"/> 
+            <a href="https://github.com/MarianoRamborger/YayTa" target="blank"> <GitHubIcon className="recent-project-prev-svg github-icon Orange"/> </a>
 
-            <div className="proyectos-recientes">  <p>  </p>  </div>   
-            
+            <div className="proyectos-recientes">  
+                
+                <Proyecto classes={"proyecto"} buttonClasses={"proyecto-button button-orangered"} projectId={1} expClass={"experience-text"}/>
+               
+                {/* projecto y proyecto-button son las must-pass */}
+           </div>          
             
             <Bird className="recent-project-post-svg project-1-post-svg Blue mirror"/>  
         </div>      
@@ -52,13 +51,18 @@ const RProject = (props) => {
 
     else if (props.template === "blue") {
         return(
-        <div className="recent-project flex-row project-3 demo-height">
+        <div className="recent-project flex-row project-3">
 
-        <Owl className="recent-project-prev-svg Red reverse left"/> 
+             <a href="https://github.com/MarianoRamborger/Metodos" target="blank"> <GitHubIcon className="recent-project-prev-svg github-icon Red"/> </a>
+           
 
-        <div className="proyectos-recientes">  <p>  </p>  </div>   
+            <div className="proyectos-recientes">  
+                
+                    <Proyecto classes={"proyecto"} buttonClasses={"proyecto-button button-blue"} projectId={2} expClass={"experience-text"}/>
+                    {/* projecto y proyecto-button son las must-pass */}
+              </div>   
 
-        <Grass className="recent-project-post-svg"/>  
+            <Grass className="recent-project-post-svg"/>  
         </div>      
         )
     }
