@@ -13,7 +13,7 @@ const Footer = (props) => {
         <div className="icons-div">
 
         <a href="mailto:marianoramborger@gmail.com" className="footer-icon" target="blank"> <MailIcon />   </a>
-        <a href="https://github.com/" className="footer-icon" target="blank"> <GitHubIcon />   </a>
+        <a href="https://github.com/MarianoRamborger" className="footer-icon" target="blank"> <GitHubIcon />   </a>
         <a href="https://www.linkedin.com/in/mariano-ramborger-342364190/" className="footer-icon" target="blank"> <LinkedInIcon />   </a>
         <a href="https://www.facebook.com/mariano.ram.357" className="footer-icon" target="blank"> <FacebookIcon />   </a>
 

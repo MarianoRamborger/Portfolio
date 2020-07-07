@@ -24,7 +24,7 @@ const {projectId} = props
 
                     <div className="overlay"> 
 
-                    <button className={`${props.buttonClasses} `}> Visitar </button>
+                    <a href={experiences[projectId].link} className={`${props.buttonClasses} `}> Visitar </a>
 
                     <button className={`${props.buttonClasses} `} onClick={handleDisplayExperience}> Experiencia </button>
             

@@ -11,13 +11,12 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 const RProject = (props) => {
 
-    //Vos maybe como column
 
     if (props.template === "orange" ) {
         return (
             <div className="recent-project flex-row project-1">
 
-                <a href="https://github.com/MarianoRamborger/Criadero" target="blank"> <GitHubIcon className="recent-project-prev-svg github-icon Yellow"/> </a>
+                <a href="https://github.com/MarianoRamborger/Criadero" target="blank" className="github-icon-a"> <GitHubIcon className="recent-project-prev-svg github-icon Yellow"/> </a>
 
                 <div className="proyectos-recientes">  
                 
