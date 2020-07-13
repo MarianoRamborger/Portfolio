@@ -34,7 +34,7 @@ const RProject = (props) => {
 
         <div className="recent-project flex-row project-2">
 
-            <a href="https://github.com/MarianoRamborger/YayTa" target="blank"> <GitHubIcon className="recent-project-prev-svg github-icon Orange"/> </a>
+            <a href="https://github.com/MarianoRamborger/YayTa" target="blank" className="github-icon-a">  <GitHubIcon className="recent-project-prev-svg github-icon Orange"/> </a>
 
             <div className="proyectos-recientes">  
                 
@@ -52,7 +52,7 @@ const RProject = (props) => {
         return(
         <div className="recent-project flex-row project-3">
 
-             <a href="https://github.com/MarianoRamborger/Metodos" target="blank"> <GitHubIcon className="recent-project-prev-svg github-icon Red"/> </a>
+             <a href="https://github.com/MarianoRamborger/Metodos" target="blank" className="github-icon-a"> <GitHubIcon className="recent-project-prev-svg github-icon Red"/> </a>
            
 
             <div className="proyectos-recientes">  

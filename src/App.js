@@ -7,10 +7,14 @@ import Footer from './Sections/Footer/Footer'
 import {Ping} from './Services/Ping'
 
 
+export const LanguageContext = React.createContext();
+
+
+
 
 const App = () => {
 
-  const [language, changeLanguage] = useState("english")
+  const [language, changeLanguage] = useState(  navigator.language.includes("es") ? "ES" : "EN")
 
   const handleLanguage = (language) => {
     changeLanguage("english")
@@ -20,24 +24,30 @@ const App = () => {
     Ping()
   })
 
+    console.log(language)
   
   return (
     
     <React.Fragment>
 
-    <Start language={language}/>
+      <LanguageContext.Provider value={{language, changeLanguage}}> 
+      {/* Context union point */}
 
-    <RprojectsDivider />
-    <Rproject template="orange" language={language}  />
-    <Rproject template="red"  language={language}/>
-    <Rproject template="blue"  language={language}/>
+      <Start language={language}/>
 
-    <Footer language={language} />
+      <RprojectsDivider />
+        <Rproject template="orange" language={language}  />
+        <Rproject template="red"  language={language}/>
+        <Rproject template="blue"  language={language}/>
 
-    <div className="soil" 
-    onClick={handleLanguage} // This be here just to deploy
-    > </div>
+      <Footer language={language} />
 
+      <div className="soil" 
+        onClick={handleLanguage} // This be here just to deploy
+      > </div>
+
+
+      </LanguageContext.Provider>
     </React.Fragment>
 
 

@@ -1,19 +1,21 @@
-import React, {useState} from 'react'
-import experiences from './proyectos-list'
+import React, {useState, useContext} from 'react'
+import {LanguageContext} from '../App'
 
+import experiencias from './proyectos-list'
+import experiences from './projects-list'
 
 
 const Proyecto = (props) => {
 
-const [experience, displayExperience] = useState(false)
 
+const [experience, displayExperience] = useState(false)
+const LContext = useContext(LanguageContext)
 
 const handleDisplayExperience = () => {
     displayExperience(!experience)
 }
 
 const {projectId} = props
-
      
      return (
          
@@ -24,26 +26,36 @@ const {projectId} = props
 
                     <div className="overlay"> 
 
-                    <a href={experiences[projectId].link} className={`${props.buttonClasses} `}> Visitar </a>
+                    <a href={experiences[projectId].link} className={`${props.buttonClasses} `}> {LContext.language === "ES" ? "Visitar" : "Visit"   } </a>
 
-                    <button className={`${props.buttonClasses} `} onClick={handleDisplayExperience}> Experiencia </button>
+                    <button className={`${props.buttonClasses} `} onClick={handleDisplayExperience}> {LContext.language === "ES" ? "Experiencia" : "Experience"   } </button>
             
             
                 </div>
         </div>
             
                 {
-                    experience ? 
-                    <div className="experience-div">   
-                        <div > 
-                            <h2 className={props.expClass}> {experiences[projectId].id} </h2>
-                            <h4 className={props.expClass}> {experiences[projectId].desc }  </h4>
-                            <h4 className={props.expClass}> {experiences[projectId].comment} </h4>
+                    experience ?
+                        LContext.language === "ES" ? 
+
+
+                        <div className="experience-div">   
+                            <div > 
+                                <h2 className={props.expClass}> {experiencias[projectId].id} </h2>
+                                <h4 className={props.expClass}> {experiencias[projectId].desc }  </h4>
+                                <h4 className={props.expClass}> {experiencias[projectId].comment} </h4>
+                            </div>
                         </div>
-                       
 
-                    </div>
 
+                        :
+                        <div className="experience-div">   
+                            <div > 
+                                <h2 className={props.expClass}> {experiences[projectId].id} </h2>
+                                <h4 className={props.expClass}> {experiences[projectId].desc }  </h4>
+                                <h4 className={props.expClass}> {experiences[projectId].comment} </h4>
+                            </div>
+                        </div>
 
                     :
                     null
