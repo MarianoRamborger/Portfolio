@@ -14,12 +14,9 @@ export const LanguageContext = React.createContext();
 
 const App = () => {
 
-  const [language, changeLanguage] = useState(  navigator.language.includes("es") ? "ES" : "EN")
+  const [language, changeLanguage] = useState(navigator.language.includes("es") ? "ES" : "EN")
 
-  const handleLanguage = (language) => {
-    changeLanguage("english")
-  }
-
+  
   useEffect(() =>{
     Ping()
   })
@@ -33,7 +30,7 @@ const App = () => {
       <LanguageContext.Provider value={{language, changeLanguage}}> 
       {/* Context union point */}
 
-      <Start language={language}/>
+      <Start language={language} changeLanguage={changeLanguage}/>
 
       <RprojectsDivider />
         <Rproject template="orange" language={language}  />
@@ -43,7 +40,7 @@ const App = () => {
       <Footer language={language} />
 
       <div className="soil" 
-        onClick={handleLanguage} // This be here just to deploy
+        
       > </div>
 
 

@@ -3,7 +3,9 @@ import {LanguageContext} from '../App'
 
 import experiencias from './proyectos-list'
 import experiences from './projects-list'
-
+import {ReactComponent as MiddaySun} from '../Sections/RecentProjects/Svgs/MiddaySun.svg'
+import {ReactComponent as Sunset} from '../Sections/RecentProjects/Svgs/Sunset.svg'
+import {ReactComponent as Grass} from '../Sections/RecentProjects/Svgs/Grass.svg'
 
 const Proyecto = (props) => {
 
@@ -30,8 +32,9 @@ const {projectId} = props
 
                     <button className={`${props.buttonClasses} `} onClick={handleDisplayExperience}> {LContext.language === "ES" ? "Experiencia" : "Experience"   } </button>
             
-            
+                 
                 </div>
+                
         </div>
             
                 {
@@ -61,7 +64,19 @@ const {projectId} = props
                     null
                 }  
 
-
+                <div className="post-svg-div">
+                
+                {
+                    props.displayNumber === 0 && <MiddaySun className="post-svg Red"/>
+                }
+                {
+                    props.displayNumber === 1 && <Sunset className="post-svg Blue"/>
+                }
+                {
+                    props.displayNumber === 2 && <Grass className="post-svg "/>
+                }
+                </div>
+     
             </div>
      )
    
