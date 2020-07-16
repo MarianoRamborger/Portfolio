@@ -5,9 +5,9 @@ import metodos from '../Proyecto/metodosPic.png'
 const experiences = [
     {
         id : ` Dog breeder - "Snowflakes" `,
-        link: "https://criaderocopodenieve.netlify.app/",
+        link: "https://www.maltescopodenieve.com.ar/",
         image: criadero,
-        desc: "Maltese dogs. Demo version.",
+        desc: "A breeder specializing in Maltese dogs.",
         comment: "I used facebook's SDK to implement their messenger."
        
     },
@@ -15,7 +15,7 @@ const experiences = [
         id: "Ya&Ta",
         image: yayta,
         link: "https://yayta.netlify.app/",
-        desc: 'My first e-shop. Lovingly made with the MERN stack.. Demo version.',
+        desc: 'My first e-shop. Lovingly made with the MERN stack. Demo version.',
         comment: "This project gave me the chance to manage complex states and user validation. I also made friends with Mercadolibre's API and MongoDB's ATLAS."
     },
     {
@@ -23,7 +23,7 @@ const experiences = [
         image: metodos,
         link: "https://metodospsicofisiologicos.netlify.app/",
         desc: "A simple webpage, made for the university course I teach in.",
-        comment: "I wanted to make a SAP using only vainilla javascript. Since most students connect from their cellphones, a simple design was paramount."
+        comment: "A SAP using vainilla javascript. Since most students connect from their cellphones, a simple design was paramount."
     }
 ]
 

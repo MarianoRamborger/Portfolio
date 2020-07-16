@@ -34,7 +34,7 @@ const Start = (props) => {
                 <div className="intro-text blur-down" > Hola, soy Mariano.</div>
                 
                 <div className="desc-text blur-down-d05"> Desarrollador Web full-stack. </div>
-                <div className="last-desc-text blur-down-d10"> More filler text  </div>           
+                <div className="last-desc-text blur-down-d10">  Querés ver algunos de mis trabajos anteriores? </div>           
             </div>
 
         :
@@ -42,7 +42,7 @@ const Start = (props) => {
                 <div className="intro-text blur-down" > Hi, I'm Mariano.</div>
                 
                 <div className="desc-text blur-down-d05"> Full-stack web developer. </div>
-                <div className="last-desc-text blur-down-d10"> More filler text  </div>           
+                <div className="last-desc-text blur-down-d10"> Want to see some webpages I have made? </div>           
             </div>
         
         }
