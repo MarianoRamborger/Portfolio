@@ -184,6 +184,15 @@ html, body {
 
 }
 
+@media only screen and (max-width: 500px) {
+  .post-svg {
+    display: none
+  }
+  .github-icon-a {
+    display: none
+  }
+}
+
 .Yellow {fill: #F2E394; color: #F2E394  }
 .Red {fill: #D96459 ; color: #D96459}
 .Orange { fill: #F2AE72  ; color: #F2AE72}

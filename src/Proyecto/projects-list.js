@@ -1,8 +1,16 @@
-import criadero from '../Proyecto/criaderoPic.png'
-import yayta from '../Proyecto/yaytaPic.png'
-import metodos from '../Proyecto/metodosPic.png'
+import criadero from './Images/Maltes.jpg'
+import yayta from './Images/Yata.jpg'
+import metodos from './Images/Metodos.png'
+import lanas from './Images/Lanas.jpg'
 
 const experiences = [
+    {
+        id : ` Maradans - Yarns `,
+        link: "https://lanasmaradans.netlify.app/",
+        image: lanas,
+        desc: "A highly personalized and customer-oriented yarn shop.",
+        comment: "They gave me near-absolute design freedom!"
+    },
     {
         id : ` Dog breeder - "Snowflakes" `,
         link: "https://www.maltescopodenieve.com.ar/",

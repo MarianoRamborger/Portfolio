@@ -1,8 +1,17 @@
-import criadero from '../Proyecto/criaderoPic.png'
-import yayta from '../Proyecto/yaytaPic.png'
-import metodos from '../Proyecto/metodosPic.png'
+import criadero from './Images/Maltes.jpg'
+import yayta from './Images/Yata.jpg'
+import metodos from './Images/Metodos.png'
+import lanas from './Images/Lanas.jpg'
 
 const experiences = [
+    {
+        id : `Lanas Maradans"`,
+        link: "https://lanasmaradans.netlify.app/",
+        image: lanas,
+        desc: "Un negocio de venta de lana altamente orientado al cliente.",
+        comment: "Me dieron libertad de diseño casi absoluta!"
+    }
+    ,
     {
         id : `Criadero "Copos de nieve"`,
         link: "https://www.maltescopodenieve.com.ar/",
