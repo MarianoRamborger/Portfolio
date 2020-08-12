@@ -5,7 +5,7 @@ import lanas from './Images/Lanas.jpg'
 
 const experiences = [
     {
-        id : `Lanas Maradans"`,
+        id : `Lanas Maradans`,
         link: "https://lanasmaradans.netlify.app/",
         image: lanas,
         desc: "Un negocio de venta de lana altamente orientado al cliente.",

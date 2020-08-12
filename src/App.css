@@ -301,6 +301,10 @@ html, body {
 
 }
 
+.proyecto-button:hover {
+  cursor: pointer;
+}
+
 
 .button-orange {
   color: white;
