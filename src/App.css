@@ -143,7 +143,7 @@ html, body {
   font-size: 300% !important;
 }
 
-.recent-project-prev-svg:hover, .start-image:hover, .divider-prev-svg:hover, .divider-post-svg:hover  {
+.recent-project-prev-svg:hover, .divider-prev-svg:hover, .divider-post-svg:hover  {
   filter: saturate(50);
 }
 
