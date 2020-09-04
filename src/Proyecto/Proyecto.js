@@ -24,7 +24,17 @@ const {projectId} = props
          <div className={props.classes}>
                  <div className={"project-image-container"}>
 
-                    <img src={experiences[projectId].image} alt="Imagen del sitio web" className="project-pic"/>
+                    {
+                        experiences[projectId].video ? 
+                        <video autoPlay loop muted className="project-pic"> 
+                        <source src={require(`${experiences[projectId].image}`)} type="video/mp4" />
+
+                        </video>
+                        :
+                        <img src={experiences[projectId].image} alt="Imagen del sitio web" className="project-pic"/>
+
+                    }
+                   
 
                     <div className="overlay"> 
 

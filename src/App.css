@@ -316,6 +316,15 @@ html, body {
   filter: contrast(1.5)
 }
 
+
+.video {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+
+
+}
+
 .button-orangered {
   color: white;
   background-color: #D96459;
