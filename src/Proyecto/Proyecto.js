@@ -7,6 +7,8 @@ import {ReactComponent as MiddaySun} from '../Sections/RecentProjects/Svgs/Midda
 import {ReactComponent as Sunset} from '../Sections/RecentProjects/Svgs/Sunset.svg'
 import {ReactComponent as Grass} from '../Sections/RecentProjects/Svgs/Grass.svg'
 
+// import Axios from 'axios'
+
 const Proyecto = (props) => {
 
 
@@ -18,6 +20,14 @@ const handleDisplayExperience = () => {
 }
 
 const {projectId} = props
+
+    
+// useEffect(() => {
+    
+
+// }, [])
+
+
      
      return (
          
