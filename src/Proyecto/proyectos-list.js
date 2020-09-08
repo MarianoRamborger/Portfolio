@@ -3,6 +3,10 @@ import yayta from './Images/Yata.jpg'
 import metodos from './Images/Metodos.png'
 import lanas from './Images/Lanas.jpg'
 
+
+
+
+
 const experiences = [
     {
         id : ` Lo de Vilma `,
@@ -17,6 +21,7 @@ const experiences = [
         id : `Lanas Maradans`,
         link: "https://lanasmaradans.netlify.app/",
         image: lanas,
+        mobImage: './Images/Mobile/Lanas.jpg',
         desc: "Un negocio de venta de lana altamente orientado al cliente.",
         comment: "Me dieron libertad de diseño casi absoluta!",
         video: false

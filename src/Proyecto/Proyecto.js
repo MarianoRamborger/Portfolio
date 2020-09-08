@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext, } from 'react'
 import {LanguageContext} from '../App'
 
 import experiencias from './proyectos-list'
@@ -7,13 +7,20 @@ import {ReactComponent as MiddaySun} from '../Sections/RecentProjects/Svgs/Midda
 import {ReactComponent as Sunset} from '../Sections/RecentProjects/Svgs/Sunset.svg'
 import {ReactComponent as Grass} from '../Sections/RecentProjects/Svgs/Grass.svg'
 
+import Loading from './Videos/Loading.gif'
+
 // import Axios from 'axios'
+
+// Hardcoded for now due to hosting problems
+import Vilmavideo from './Videos/vilma.mp4'
+//
 
 const Proyecto = (props) => {
 
 
 const [experience, displayExperience] = useState(false)
 const LContext = useContext(LanguageContext)
+
 
 const handleDisplayExperience = () => {
     displayExperience(!experience)
@@ -22,10 +29,7 @@ const handleDisplayExperience = () => {
 const {projectId} = props
 
     
-// useEffect(() => {
-    
 
-// }, [])
 
 
      
@@ -35,16 +39,25 @@ const {projectId} = props
                  <div className={"project-image-container"}>
 
                     {
-                        experiences[projectId].video ? 
-                        <video autoPlay loop muted className="project-pic"> 
-                        <source src={require(`${experiences[projectId].image}`)} type="video/mp4" />
 
+                        experiences[projectId].video ? 
+
+                        <div className="video-div" >
+
+
+                        <video autoPlay loop muted className="project-pic" > 
+                        <source src={Vilmavideo} type="video/mp4" />
                         </video>
+                        </div>
+                        
+
                         :
-                        <img src={experiences[projectId].image} alt="Imagen del sitio web" className="project-pic"/>
+                        <img src={experiences[projectId].image} alt="Imagen del sitio web" className="project-pic" decoding="async" loading="lazy" placeholder={Loading}/>
 
                     }
                    
+
+
 
                     <div className="overlay"> 
 

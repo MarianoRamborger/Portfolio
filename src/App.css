@@ -247,14 +247,35 @@ html, body {
  
 }
 
-.project-pic {
+.project-pic, .video-div {
   display: block;
   width: 100%;
   height: 100%;
   border-radius: 20px;
   min-width: 300px;
   min-height: 200px;
+  max-width: 800px;
+  max-height: 800px;
 }
+
+.video-div {
+
+  background-color: transparent;
+  display: flex;
+  flex-flow:  row wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+
+
+.video-div img {
+  max-width: 128px;
+  max-height: 128px;
+  background: transparent;
+}
+
+
 
 .overlay {
   display: block;
